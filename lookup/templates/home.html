@@ -4,4 +4,20 @@
 
 <h1>Hello World </h1>
 
+<!-- 
+    Doing like print_r acton
+    {{ api }}
+-->
+<div style='padding:15px'>
+{% if api %}
+    {% if api == 'Error...'%}
+        There is an Error, Please try later
+    {% else %}
+        Air Quality: {{api.0.AQI}}<br/>
+        Area: {{api.0.ReportingArea}}<br/>
+        Category: {{api.0.Category.Name}}<br/>
+    {% endif%}
+{% endif %}
+</div>
+
 {% endblock %}
